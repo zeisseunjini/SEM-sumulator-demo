@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SEM 시뮬레이터 </title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    
+    <div id="simulator-container">
+        
+        <div id="control-sidebar">
+            <div id="logo-section">
+                <span id="logo-myscope">SEM 초점</span>
+                <span id="logo-sem">Working Distance (WD)</span>
+            </div>
+            
+            <div class="control-group">
+                <div class="control-label">
+                    FOCUS (WD 조절) 
+                </div>
+                <input type="range" id="focusSlider" min="-20" max="20" step="1" value="0">
+            </div>
+            
+            <div id="image-controls-side">
+                <input type="file" id="imgLoader" accept="image/*" style="display: none;">
+                <button onclick="document.getElementById('imgLoader').click()">샘플 이미지 로드</button>
+            </div>
+
+        </div>
+        
+        <div id="main-display">
+            
+            <div id="message-bar">
+                시료에 닿는 빔의 크기를 조절하여 이미지를 선명하게 만드세요!
+            </div>
+
+            <div id="canvas-container">
+                <div class="canvas-wrapper">
+                    <h2>MAIN IMAGE </h2>
+                    <canvas id="mainCanvas" width="550" height="400"></canvas>
+                </div>
+                
+                <div class="canvas-wrapper">
+                    <h2>FOCUS 원리 시각화</h2>
+                    <canvas id="microscopeCanvas" width="300" height="400"></canvas>
+                </div>
+
+                <div class="canvas-wrapper">
+                    <h2>픽셀 대비 빔 크기</h2>
+                    <canvas id="spotSizeCanvas" width="200" height="400"></canvas>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
