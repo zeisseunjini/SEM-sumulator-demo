@@ -10,24 +10,7 @@
     <div id="simulator-container">
         
         <div id="control-sidebar">
-            <div id="logo-section">
-                <span id="logo-myscope">SEM 초점</span>
-                <span id="logo-sem">Working Distance (WD)</span>
             </div>
-            
-            <div class="control-group">
-                <div class="control-label">
-                    FOCUS (WD 조절) 
-                </div>
-                <input type="range" id="focusSlider" min="-20" max="20" step="1" value="0">
-            </div>
-            
-            <div id="image-controls-side">
-                <input type="file" id="imgLoader" accept="image/*" style="display: none;">
-                <button onclick="document.getElementById('imgLoader').click()">샘플 이미지 로드</button>
-            </div>
-
-        </div>
         
         <div id="main-display">
             
@@ -51,8 +34,18 @@
                     <canvas id="spotSizeCanvas" width="200" height="400"></canvas>
                 </div>
             </div>
-            
-        </div>
+
+            <div id="controls-bottom-panel"> 
+                
+                <div class="control-group">
+                    <div class="control-label">
+                        FOCUS (WD 조절) 
+                    </div>
+                    <input type="range" id="focusSlider" min="-20" max="20" step="1" value="0">
+                </div>
+                
+                </div>
+            </div>
         
     </div>
 
